@@ -6,14 +6,19 @@
             Price: {{ data.price*quantity | currency }}
         </span>
         <span class="spacer"></span>
-        <span class="quantity">
-            <button class="qty-sub-btn" (click)="decreaseQty()">-</button>
-            {{ quantity }}
-            <button class="qty-add-btn" (click)="increaseQty()">+</button>
-        </span>
-        <span>
-            <button class="add-to-cart-btn" (click)="addToCart(data.id, quantity, data.title, data.price)">Add to Cart</button>
-        </span>
+        <ng-container *ngIf="itemInCart$ | async; else addtocart">
+            <button class="cart-btn">Goto Cart</button>
+        </ng-container>
+        <ng-template #addtocart>
+            <span class="quantity">
+                <button class="qty-sub-btn" (click)="decreaseQty()">-</button>
+                {{ quantity }}
+                <button class="qty-add-btn" (click)="increaseQty()">+</button>
+            </span>
+            <span>
+                <button class="cart-btn" (click)="addToCart(data.id, quantity, data.title, data.price)">Add to Cart</button>
+            </span>
+        </ng-template>
     </div>
 </section>
 <p>{{ data.shortDesc }}</p>

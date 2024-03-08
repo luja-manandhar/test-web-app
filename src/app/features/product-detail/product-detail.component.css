@@ -17,7 +17,7 @@
     flex: 1 1 auto;
 }
 
-button.add-to-cart-btn {
+button.cart-btn {
     display: flex;
     width: 200px;
     height: 40px;
