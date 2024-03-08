@@ -1,0 +1,9 @@
+<button class="left-arrow"></button>
+<ng-container *ngFor="let image of images; index as i; trackBy: imageByIndex">
+    <img [src]="image" alt="" class="carousel-image" [ngClass]="{ 
+            'prev-image': currentIndex === 0 ? i === images.length - 1 : i === currentIndex - 1, 
+            'current-image': currentIndex === i, 
+            'next-image': currentIndex === images.length - 1 ? i === 0 : currentIndex + 1 === i
+        }" width="100%">
+</ng-container>
+<button class="right-arrow"></button>

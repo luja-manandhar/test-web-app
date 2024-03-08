@@ -1,0 +1,28 @@
+<h1>{{ data.title }}</h1>
+<section>
+    <app-carousel [images]="data.images"></app-carousel>
+    <div class="cart-actions">
+        <span>
+            Price: {{ data.price | currency}}
+        </span>
+        <span>
+            <button>-</button>
+            {{ quantity }}
+            <button>+</button>
+        </span>
+        <span>
+            <button>Add to Cart</button>
+        </span>
+    </div>
+</section>
+<p>{{ data.shortDesc }}</p>
+<article>
+    <img [src]="data.fullDesc.mainImage" alt="">
+    <h2>{{ data.fullDesc.title }}</h2>
+    <ng-container *ngFor="let paragraph of data.fullDesc.detailParagraphs">
+        <p>{{ paragraph }}</p>
+    </ng-container>
+    <div class="features-list" *ngFor="let feature of data.fullDesc.featuresList; trackBy: featureById">
+        <app-product-feature [featureData]="feature"></app-product-feature>
+    </div>
+</article>
