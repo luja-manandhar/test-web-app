@@ -17,7 +17,7 @@
 </section>
 <p>{{ data.shortDesc }}</p>
 <article>
-    <img [src]="data.fullDesc.mainImage" alt="">
+    <img [src]="data.fullDesc.mainImage" alt="" width="100%">
     <h2>{{ data.fullDesc.title }}</h2>
     <ng-container *ngFor="let paragraph of data.fullDesc.detailParagraphs">
         <p>{{ paragraph }}</p>

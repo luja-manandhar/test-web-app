@@ -1,0 +1,103 @@
+:host {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 4px gray;
+    overflow: hidden;
+}
+
+.carousel-image {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    aspect-ratio: 1;
+    transition: 1s ease;
+    position: absolute;
+}
+
+.prev-image,
+.current-image,
+.next-image {
+    opacity: 1;
+    display: block;
+}
+
+.current-image {
+    height: 300px;
+    width: 300px;
+    aspect-ratio: 1;
+    z-index: 2;
+}
+
+.prev-image,
+.next-image {
+    height: 100px;
+    width: 100px;
+    aspect-ratio: 1;
+    z-index: 1;
+}
+
+.prev-image {
+    left: calc(25% - 50px);
+}
+
+.current-image {
+    left: calc(50% - 150px);
+}
+
+.next-image {
+    left: calc(75% - 50px);
+}
+
+.after-next {
+    left: calc(75% - 50px);
+}
+
+.before-prev {
+    left: calc(25% - 50px);
+}
+
+button {
+    height: 100%;
+    width: 100px;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: transparent;
+}
+
+.left-arrow {
+    padding-left: 20px;
+}
+
+.right-arrow {
+    padding-right: 20px;
+}
+
+button::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    rotate: 45deg;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.right-arrow::before {
+    rotate: 225deg;
+    padding-left: 0px;
+}

@@ -1,9 +1,13 @@
-<button class="left-arrow"></button>
+<button [disabled]="currentIndex === 0" class="left-arrow" (click)="prevImage()"></button>
+<span class="carousel-image prev-image" *ngIf="currentIndex === 0"></span>
 <ng-container *ngFor="let image of images; index as i; trackBy: imageByIndex">
-    <img [src]="image" alt="" class="carousel-image" [ngClass]="{ 
-            'prev-image': currentIndex === 0 ? i === images.length - 1 : i === currentIndex - 1, 
-            'current-image': currentIndex === i, 
-            'next-image': currentIndex === images.length - 1 ? i === 0 : currentIndex + 1 === i
-        }" width="100%">
+    <img [src]="image" alt="" class="carousel-image" [ngClass]="{
+            'before-prev': i === currentIndex - 2,
+            'prev-image': i === currentIndex - 1,
+            'current-image': i === currentIndex, 
+            'next-image': i === currentIndex + 1,
+            'after-next': i === currentIndex + 2
+        }">
 </ng-container>
-<button class="right-arrow"></button>
+<span class="carousel-image next-image" *ngIf="currentIndex === images.length - 1"></span>
+<button [disabled]="currentIndex === images.length - 1" class="right-arrow" (click)="nextImage()"></button>
