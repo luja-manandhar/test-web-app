@@ -1,6 +1,8 @@
 export const mock_data = {
-  "title": "Discover visionOS",
-  "shortDesc": "All-new platform. Familiar frameworks and tools. Get ready to design and build an entirely new universe of apps and games for Apple Vision Pro.",
+  "id": 1,
+  "title": "Apple Vision Pro",
+  "shortDesc": "With Apple Vision Pro, you have an infinite canvas that transforms how you use the apps you love. Arrange apps anywhere and scale them to the perfect size, making the workspace of your dreams a reality — all while staying present in the world around you. Browse the web in Safari, create a to-do list in Notes, chat in Messages, and seamlessly move between them with a glance.",
+  // "shortDesc": "All-new platform. Familiar frameworks and tools. Get ready to design and build an entirely new universe of apps and games for Apple Vision Pro.",
   "images": [
     "../../../assets/images/1.jpg",
     "../../../assets/images/2.jpg",

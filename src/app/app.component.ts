@@ -8,8 +8,6 @@ import { ProductDetailComponent } from './features/product-detail/product-detail
   standalone: true,
   imports: [CommonModule, RouterOutlet, ProductDetailComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'test-app-03-07';
-}
+export class AppComponent {}

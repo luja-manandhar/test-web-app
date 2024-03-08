@@ -5,13 +5,14 @@
         <span>
             Price: {{ data.price | currency}}
         </span>
-        <span>
-            <button>-</button>
+        <span class="spacer"></span>
+        <span class="quantity">
+            <button class="qty-sub-btn" (click)="decreaseQty()">-</button>
             {{ quantity }}
-            <button>+</button>
+            <button class="qty-add-btn" (click)="increaseQty()">+</button>
         </span>
         <span>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" (click)="addToCart(data.id, quantity, data.title)">Add to Cart</button>
         </span>
     </div>
 </section>

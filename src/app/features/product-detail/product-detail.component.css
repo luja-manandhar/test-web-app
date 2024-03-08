@@ -3,3 +3,46 @@
     display: block;
     margin: auto;
 }
+
+.cart-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+button.add-to-cart-btn {
+    display: flex;
+    width: 200px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 3px gray;
+    background: #fff;
+}
+
+.quantity {
+    box-shadow: 0 0 3px gray;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.quantity button {
+    height: 100%;
+    aspect-ratio: 1;
+    border: none;
+}

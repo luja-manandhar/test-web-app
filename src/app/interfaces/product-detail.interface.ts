@@ -1,4 +1,5 @@
 export interface ProductDetailInterface {
+    id: number,
     title: string,
     shortDesc: string,
     images: string[],
