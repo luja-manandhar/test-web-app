@@ -28,8 +28,8 @@ export class ProductDetailComponent {
     this.quantity--;
   }
 
-  addToCart(id: number, quantity: number, name: string) {
-    this.cartService.addToCart(id, name, quantity);
+  addToCart(id: number, quantity: number, name: string, unitPrice: number) {
+    this.cartService.addToCart(id, name, quantity, unitPrice);
   }
 
   featureById(
