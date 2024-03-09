@@ -3,6 +3,7 @@
     top: 0;
     bottom: 0;
     right: 0;
+    max-width: 100vw;
     width: 400px;
     background-color: lightgray;
     box-shadow: -4px 0 4px gray;

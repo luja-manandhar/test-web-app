@@ -48,3 +48,17 @@ button.cart-btn {
     border: none;
     cursor: pointer;
 }
+
+.cart-actions.mobile {
+    justify-content: center;
+}
+
+.cart-actions.mobile .price {
+    width: 100%;
+    text-align: center;
+}
+
+app-product-feature.mobile {
+    display: flex;
+    flex-direction: column;
+}

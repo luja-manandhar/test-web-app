@@ -1,7 +1,7 @@
 <h1>{{ data.title }}</h1>
 <section>
     <app-carousel [images]="data.images"></app-carousel>
-    <div class="cart-actions">
+    <div class="cart-actions" [ngClass]="{ 'mobile': isHandset$ | async }">
         <div class="price">
             <span *ngIf="itemInCart$ | async; else price">
                 Item Already in Cart
@@ -12,7 +12,7 @@
                 </span>
             </ng-template>
         </div>
-        <span class="spacer"></span>
+        <span class="spacer" *ngIf="(isHandset$ | async) === false"></span>
         <ng-container *ngIf="itemInCart$ | async; else addtocart">
             <button class="cart-btn" (click)="openMiniCart()">Goto Cart</button>
         </ng-container>
@@ -36,6 +36,6 @@
         <p>{{ paragraph }}</p>
     </ng-container>
     <div class="features-list" *ngFor="let feature of data.fullDesc.featuresList; trackBy: featureById">
-        <app-product-feature [featureData]="feature"></app-product-feature>
+        <app-product-feature [featureData]="feature" [ngClass]="{ 'mobile': isHandset$ | async }"></app-product-feature>
     </div>
 </article>
