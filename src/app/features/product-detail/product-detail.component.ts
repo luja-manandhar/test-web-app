@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { mock_data } from '../../mock_data/data';
 import { CarouselComponent } from '../../components/carousel/carousel.component';
 import { ProductFeatureComponent } from '../../components/product-feature/product-feature.component';
 import { AsyncPipe, CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import { ProductDetailInterface } from '../../interfaces/product-detail.interface';
 import { CartService } from '../../services/cart.service';
 import { map } from 'rxjs';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,9 +15,10 @@ import { map } from 'rxjs';
   styleUrl: './product-detail.component.css',
 })
 export class ProductDetailComponent {
-  data:ProductDetailInterface = mock_data;
   quantity: number = 1;
   private readonly cartService = inject(CartService);
+  private readonly apiService = inject(ApiService);
+  data:ProductDetailInterface = this.apiService.getMockData;
   itemInCart$ = this.cartService.cartItems.pipe(map(items => items.find(item => item.id === this.data.id)));
 
   increaseQty() {

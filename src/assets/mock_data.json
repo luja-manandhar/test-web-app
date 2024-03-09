@@ -1,0 +1,41 @@
+{
+    "id": 1,
+    "title": "Apple Vision Pro",
+    "shortDesc": "With Apple Vision Pro, you have an infinite canvas that transforms how you use the apps you love. Arrange apps anywhere and scale them to the perfect size, making the workspace of your dreams a reality — all while staying present in the world around you. Browse the web in Safari, create a to-do list in Notes, chat in Messages, and seamlessly move between them with a glance.",
+    "images": [
+      "../../../assets/images/1.jpg",
+      "../../../assets/images/2.jpg",
+      "../../../assets/images/3.jpg",
+      "../../../assets/images/4.jpg"
+    ],
+    "fullDesc": {
+      "title": "A spectrum of immersion",
+      "mainImage": "https://developer.apple.com/visionos/images/figure_2x.webp",
+      "detailParagraphs": [
+        "Apple Vision Pro offers an infinite spatial canvas to explore, experiment, and play, giving you the freedom to completely rethink your experience in 3D. People can interact with your app while staying connected to their surroundings, or immerse themselves completely in a world of your creation. And your experiences can be fluid: start in a window, bring in 3D content, transition to a fully immersive scene, and come right back.",
+        "The choice is yours, and it all starts with the building blocks of spatial computing in visionOS."
+      ],
+      "featuresList": [
+        {
+          "id": 1,
+          "title": "Windows",
+          "image": "https://developer.apple.com/visionos/images/windows-256x256_2x.png",
+          "desc": "You can create one or more windows in your visionOS app. They’re built with SwiftUI and contain traditional views and controls, and you can add depth to your experience by adding 3D content."
+        },
+        {
+          "id": 2,
+          "title": "Volumes",
+          "image": "https://developer.apple.com/visionos/images/volumes-256x256_2x.png",
+          "desc": "Add depth to your app with a 3D volume. Volumes are SwiftUI scenes that can showcase 3D content using RealityKit or Unity, creating experiences that are viewable from any angle in the Shared Space or an app’s Full Space."
+        },
+        {
+          "id": 3,
+          "title": "Spaces",
+          "image": "https://developer.apple.com/visionos/images/spaces-256x256_2x.png",
+          "desc": "By default, apps launch into the Shared Space, where they exist side by side — much like multiple apps on a Mac desktop. Apps can use windows and volumes to show content, and the user can reposition these elements wherever they like. For a more immersive experience, an app can open a dedicated Full Space where only that app’s content will appear. Inside a Full Space, an app can use windows and volumes, create unbounded 3D content, open a portal to a different world, or even fully immerse people in an environment."
+        }
+      ]
+    },
+    "price": 100,
+    "stock": 5
+  }
