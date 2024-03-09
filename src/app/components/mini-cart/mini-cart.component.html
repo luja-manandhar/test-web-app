@@ -4,8 +4,8 @@
 </div>
 <ng-container *ngIf="cartItems$ | async as cartItems">
     <ng-container *ngIf="cartItems.length > 0; else noItems">
-        <div class="cart-items-list">
-            <ng-container *ngFor="let item of cartItems">
+        <div class="cart-items-list" [@itemAnimation]>
+            <ng-container *ngFor="let item of cartItems;trackBy:itemById">
                 <div class="cart-item">
                     <div class="image">
                         <img [src]="item.image" alt="" width="100px">
@@ -29,7 +29,7 @@
     </ng-container>
 </ng-container>
 <ng-template #noItems>
-    <div class="no-item">
+    <div class="no-item" [@itemAnimation]>
         The Cart is Empty.
     </div>
 </ng-template>
