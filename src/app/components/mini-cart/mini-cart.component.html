@@ -1,0 +1,35 @@
+<div class="header">
+    <h2>Cart</h2>
+    <button class="close-btn" (click)="closeMiniCart()">+</button>
+</div>
+<ng-container *ngIf="cartItems$ | async as cartItems">
+    <ng-container *ngIf="cartItems.length > 0; else noItems">
+        <div class="cart-items-list">
+            <ng-container *ngFor="let item of cartItems">
+                <div class="cart-item">
+                    <div class="image">
+                        <img [src]="item.image" alt="" width="100px">
+                    </div>
+                    <div class="desc">
+                        <h3>{{ item.name }}</h3>
+                        <div>Quantity: {{ item.quantity }}</div>
+                        <div>Price: {{ item.unitPrice*item.quantity | currency }}</div> 
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="delete-btn">
+                        <button (click)="removeItem(item.id)">
+                            <img src="https://cdn-icons-png.flaticon.com/128/1214/1214428.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="spacer"></div>
+        <button class="checkout-btn">Checkout</button>
+    </ng-container>
+</ng-container>
+<ng-template #noItems>
+    <div class="no-item">
+        The Cart is Empty.
+    </div>
+</ng-template>

@@ -1,0 +1,82 @@
+:host {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    background-color: lightgray;
+    box-shadow: -4px 0 4px gray;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header {
+    padding: 5px 15px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button.close-btn {
+    rotate: 45deg;
+    border: none;
+    background: none;
+    font-size: 60px;
+}
+
+.no-item {
+    padding: 5px 15px;
+}
+
+.cart-item {
+    border: 1px solid gray;
+    margin: 5px 10px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.delete-btn button {
+    background: none;
+    border: none;
+}
+
+.delete-btn button img {
+    width: 20px;
+}
+
+.desc h3 {
+    margin-top: 0;
+}
+
+button.checkout-btn {
+    margin: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+button.checkout-btn:hover {
+    background: gray;
+    color: #fff;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.cart-items-list {
+    overflow: auto;
+}

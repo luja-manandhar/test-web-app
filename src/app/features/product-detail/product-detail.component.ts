@@ -30,8 +30,12 @@ export class ProductDetailComponent {
     this.quantity--;
   }
 
-  addToCart(id: number, quantity: number, name: string, unitPrice: number) {
-    this.cartService.addToCart(id, name, quantity, unitPrice);
+  addToCart(id: number, quantity: number, name: string, unitPrice: number, image: string) {
+    this.cartService.addToCart(id, name, quantity, unitPrice, image);
+  }
+
+  openMiniCart() {
+    this.cartService.openMiniCart();
   }
 
   featureById(

@@ -1,51 +1,59 @@
 :host {
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    height: 60px;
-    background-color: lightgray;
-    left: 0;
-    right: 0;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  height: 60px;
+  background-color: lightgray;
+  left: 0;
+  right: 0;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cart-btn {
-    position: relative;
+  position: relative;
 }
 
 .cart-btn button {
-    padding: 10px 30px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .badge {
-    position: absolute;
-    background: blue;
-    padding: 3px;
-    right: -5px;
-    top: -10px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    height: 16px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  background: blue;
+  padding: 3px;
+  right: -5px;
+  top: -10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  height: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav.logo a {
-    text-decoration: none;
-    color: rgb(70, 70, 70);
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: 0.5s ease-in-out;
+  text-decoration: none;
+  color: rgb(70, 70, 70);
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
 }
 
 nav.logo a:hover {
-    color: blue;
+  color: blue;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(211, 211, 211, 0.407);
+  z-index: 3;
+  border: none;
 }

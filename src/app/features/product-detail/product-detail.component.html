@@ -2,12 +2,19 @@
 <section>
     <app-carousel [images]="data.images"></app-carousel>
     <div class="cart-actions">
-        <span>
-            Price: {{ data.price*quantity | currency }}
-        </span>
+        <div class="price">
+            <span *ngIf="itemInCart$ | async; else price">
+                Item Already in Cart
+            </span>
+            <ng-template #price>
+                <span>
+                    Price: {{ data.price*quantity | currency }}
+                </span>
+            </ng-template>
+        </div>
         <span class="spacer"></span>
         <ng-container *ngIf="itemInCart$ | async; else addtocart">
-            <button class="cart-btn">Goto Cart</button>
+            <button class="cart-btn" (click)="openMiniCart()">Goto Cart</button>
         </ng-container>
         <ng-template #addtocart>
             <span class="quantity">
@@ -16,7 +23,7 @@
                 <button class="qty-add-btn" (click)="increaseQty()">+</button>
             </span>
             <span>
-                <button class="cart-btn" (click)="addToCart(data.id, quantity, data.title, data.price)">Add to Cart</button>
+                <button class="cart-btn" (click)="addToCart(data.id, quantity, data.title, data.price, data.images[0])">Add to Cart</button>
             </span>
         </ng-template>
     </div>

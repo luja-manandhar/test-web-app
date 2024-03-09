@@ -5,5 +5,7 @@
     <div class="badge">
         {{ cartItemsLength$ | async }}
     </div>
-    <button>Cart</button>
+    <button (click)="openMiniCart()">Cart</button>
 </div>
+<app-mini-cart *ngIf="viewMiniCart$ | async"></app-mini-cart>
+<button class="overlay" (click)="closeMiniCart()" *ngIf="viewMiniCart$ | async"></button>
