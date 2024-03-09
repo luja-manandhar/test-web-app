@@ -25,6 +25,7 @@
 .next-image {
     opacity: 1;
     display: block;
+    object-fit: cover;
 }
 
 .current-image {
