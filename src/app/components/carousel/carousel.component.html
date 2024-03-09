@@ -1,4 +1,4 @@
-<button [disabled]="currentIndex === 0" class="left-arrow" (click)="prevImage()"></button>
+<button [disabled]="currentIndex === 0" class="left-arrow" (click)="prevImage()" *ngIf="(isHandset$ | async) === false"></button>
 <span class="carousel-image prev-image" *ngIf="currentIndex === 0"></span>
 <ng-container *ngFor="let image of images; index as i; trackBy: imageByIndex">
     <img [src]="image" alt="" class="carousel-image" [ngClass]="{
@@ -10,4 +10,4 @@
         }">
 </ng-container>
 <span class="carousel-image next-image" *ngIf="currentIndex === images.length - 1"></span>
-<button [disabled]="currentIndex === images.length - 1" class="right-arrow" (click)="nextImage()"></button>
+<button [disabled]="currentIndex === images.length - 1" class="right-arrow" (click)="nextImage()" *ngIf="(isHandset$ | async) === false"></button>
